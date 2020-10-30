@@ -61,5 +61,5 @@ Wektor2D operator+(Wektor2D a, Wektor2D b)
 
 double operator*(Wektor2D a, Wektor2D b)
 {
-  return a.getX()*b.getX(), a.getY()*b.getY();
+  return a.getX()*b.getX()+ a.getY()*b.getY();
 }
