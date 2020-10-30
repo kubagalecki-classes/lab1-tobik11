@@ -2,7 +2,8 @@
 // {
 //     // Tutaj napisz implementacje klasy Wektor2D
 // };
-
+#include <math.h>
+using namespace std;
 
 class Informer
 {
@@ -13,9 +14,6 @@ public:
 
 class Wektor2D
 {
-    double      x;
-    double      y;
-    Informer a;
 
 public:
 
@@ -47,4 +45,22 @@ public:
     double norm() { return sqrt(x * x + y * y); }
 
     void print() { cout << "x: " << x << "  y: " << y << endl; }
+
+
+    private:
+    double      x;
+    double      y;
+    Informer a;
 };
+
+Wektor2D operator+(Wektor2D a, Wektor2D b)
+{
+  Wektor2D c(a.getX+b.getX, a.getY+b.getY);
+  return c;
+}
+
+Wektor2D operator*(Wektor2D a, Wektor2D b)
+{
+  Wektor2D c(a.getX*b.getX, a.getY*b.getY);
+  return c;
+}
